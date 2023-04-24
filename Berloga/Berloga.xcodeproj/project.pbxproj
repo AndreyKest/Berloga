@@ -7,21 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A225000729F5C2EC00AD4D1D /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225000629F5C2EC00AD4D1D /* Binding.swift */; };
+		A225000C29F5C3A100AD4D1D /* StrumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225000B29F5C3A100AD4D1D /* StrumViewModel.swift */; };
+		A225000E29F5C3D200AD4D1D /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225000D29F5C3D200AD4D1D /* NavBarController.swift */; };
+		A225001029F5C3E000AD4D1D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225000F29F5C3E000AD4D1D /* TabBarController.swift */; };
+		A225001229F5C40F00AD4D1D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225001129F5C40F00AD4D1D /* BaseViewController.swift */; };
+		A225001829F5C48100AD4D1D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225001729F5C48100AD4D1D /* BaseView.swift */; };
+		A225001A29F5C55B00AD4D1D /* UIColor + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225001929F5C55B00AD4D1D /* UIColor + extension.swift */; };
+		A225001E29F5C7F900AD4D1D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225001D29F5C7F900AD4D1D /* SettingsViewController.swift */; };
+		A225002029F5C80D00AD4D1D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225001F29F5C80D00AD4D1D /* SettingsViewModel.swift */; };
+		A225002429F5CFB700AD4D1D /* TabBarControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225002329F5CFB700AD4D1D /* TabBarControllerBuilder.swift */; };
 		A225FFE729F5BFDC00AD4D1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225FFE629F5BFDC00AD4D1D /* AppDelegate.swift */; };
 		A225FFE929F5BFDC00AD4D1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225FFE829F5BFDC00AD4D1D /* SceneDelegate.swift */; };
-		A225FFEB29F5BFDC00AD4D1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225FFEA29F5BFDC00AD4D1D /* ViewController.swift */; };
+		A225FFEB29F5BFDC00AD4D1D /* StrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225FFEA29F5BFDC00AD4D1D /* StrumViewController.swift */; };
 		A225FFF029F5BFDD00AD4D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A225FFEF29F5BFDD00AD4D1D /* Assets.xcassets */; };
 		A225FFF329F5BFDD00AD4D1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A225FFF129F5BFDD00AD4D1D /* LaunchScreen.storyboard */; };
+		A225FFFF29F5C18B00AD4D1D /* Resoureces.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225FFFE29F5C18B00AD4D1D /* Resoureces.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A225000629F5C2EC00AD4D1D /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		A225000B29F5C3A100AD4D1D /* StrumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumViewModel.swift; sourceTree = "<group>"; };
+		A225000D29F5C3D200AD4D1D /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
+		A225000F29F5C3E000AD4D1D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A225001129F5C40F00AD4D1D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A225001729F5C48100AD4D1D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A225001929F5C55B00AD4D1D /* UIColor + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + extension.swift"; sourceTree = "<group>"; };
+		A225001D29F5C7F900AD4D1D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A225001F29F5C80D00AD4D1D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		A225002329F5CFB700AD4D1D /* TabBarControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerBuilder.swift; sourceTree = "<group>"; };
 		A225FFE329F5BFDC00AD4D1D /* Berloga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Berloga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A225FFE629F5BFDC00AD4D1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A225FFE829F5BFDC00AD4D1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A225FFEA29F5BFDC00AD4D1D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A225FFEA29F5BFDC00AD4D1D /* StrumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumViewController.swift; sourceTree = "<group>"; };
 		A225FFEF29F5BFDD00AD4D1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A225FFF229F5BFDD00AD4D1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A225FFF429F5BFDD00AD4D1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A225FFFE29F5C18B00AD4D1D /* Resoureces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resoureces.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +57,126 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A225000029F5C1A000AD4D1D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A225001929F5C55B00AD4D1D /* UIColor + extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A225000129F5C1C500AD4D1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A225000229F5C1CE00AD4D1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A225000B29F5C3A100AD4D1D /* StrumViewModel.swift */,
+				A225001F29F5C80D00AD4D1D /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A225000329F5C1F800AD4D1D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A225000429F5C26900AD4D1D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		A225000529F5C2D000AD4D1D /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				A225000629F5C2EC00AD4D1D /* Binding.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		A225000829F5C36400AD4D1D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A225001629F5C47800AD4D1D /* View */,
+				A225001129F5C40F00AD4D1D /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A225000929F5C36B00AD4D1D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A225000D29F5C3D200AD4D1D /* NavBarController.swift */,
+				A225000F29F5C3E000AD4D1D /* TabBarController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A225001329F5C41600AD4D1D /* StrumView */ = {
+			isa = PBXGroup;
+			children = (
+				A225001429F5C44F00AD4D1D /* View */,
+				A225FFEA29F5BFDC00AD4D1D /* StrumViewController.swift */,
+			);
+			path = StrumView;
+			sourceTree = "<group>";
+		};
+		A225001429F5C44F00AD4D1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A225001629F5C47800AD4D1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A225001729F5C48100AD4D1D /* BaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A225001B29F5C7C900AD4D1D /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				A225001C29F5C7E100AD4D1D /* View */,
+				A225001D29F5C7F900AD4D1D /* SettingsViewController.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		A225001C29F5C7E100AD4D1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A225002129F5CBDB00AD4D1D /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				A225002229F5CFA200AD4D1D /* TabBarControllerBuilder */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		A225002229F5CFA200AD4D1D /* TabBarControllerBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				A225002329F5CFB700AD4D1D /* TabBarControllerBuilder.swift */,
+			);
+			path = TabBarControllerBuilder;
+			sourceTree = "<group>";
+		};
 		A225FFDA29F5BFDC00AD4D1D = {
 			isa = PBXGroup;
 			children = (
@@ -55,7 +197,15 @@
 			isa = PBXGroup;
 			children = (
 				A225FFFB29F5C01C00AD4D1D /* Application */,
+				A225000429F5C26900AD4D1D /* Assembly */,
+				A225FFFD29F5C16F00AD4D1D /* Helper */,
+				A225000529F5C2D000AD4D1D /* Binding */,
+				A225000329F5C1F800AD4D1D /* Service */,
+				A225002129F5CBDB00AD4D1D /* Builder */,
+				A225000129F5C1C500AD4D1D /* Model */,
 				A225FFFC29F5C02900AD4D1D /* View */,
+				A225001B29F5C7C900AD4D1D /* SettingsView */,
+				A225000229F5C1CE00AD4D1D /* ViewModel */,
 				A225FFFA29F5C00800AD4D1D /* Supporting files */,
 			);
 			path = Berloga;
@@ -83,9 +233,20 @@
 		A225FFFC29F5C02900AD4D1D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A225FFEA29F5BFDC00AD4D1D /* ViewController.swift */,
+				A225000829F5C36400AD4D1D /* Base */,
+				A225000929F5C36B00AD4D1D /* Navigation */,
+				A225001329F5C41600AD4D1D /* StrumView */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A225FFFD29F5C16F00AD4D1D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A225FFFE29F5C18B00AD4D1D /* Resoureces.swift */,
+				A225000029F5C1A000AD4D1D /* Extension */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +319,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A225FFEB29F5BFDC00AD4D1D /* ViewController.swift in Sources */,
+				A225002429F5CFB700AD4D1D /* TabBarControllerBuilder.swift in Sources */,
+				A225FFEB29F5BFDC00AD4D1D /* StrumViewController.swift in Sources */,
+				A225001029F5C3E000AD4D1D /* TabBarController.swift in Sources */,
 				A225FFE729F5BFDC00AD4D1D /* AppDelegate.swift in Sources */,
 				A225FFE929F5BFDC00AD4D1D /* SceneDelegate.swift in Sources */,
+				A225000E29F5C3D200AD4D1D /* NavBarController.swift in Sources */,
+				A225001229F5C40F00AD4D1D /* BaseViewController.swift in Sources */,
+				A225FFFF29F5C18B00AD4D1D /* Resoureces.swift in Sources */,
+				A225001829F5C48100AD4D1D /* BaseView.swift in Sources */,
+				A225002029F5C80D00AD4D1D /* SettingsViewModel.swift in Sources */,
+				A225000C29F5C3A100AD4D1D /* StrumViewModel.swift in Sources */,
+				A225001A29F5C55B00AD4D1D /* UIColor + extension.swift in Sources */,
+				A225000729F5C2EC00AD4D1D /* Binding.swift in Sources */,
+				A225001E29F5C7F900AD4D1D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,10 +473,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2XWLNFF4D6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Berloga/Info.plist;
+				INFOPLIST_FILE = "Berloga/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,10 +503,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2XWLNFF4D6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Berloga/Info.plist;
+				INFOPLIST_FILE = "Berloga/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NavBarController.swift
 //  Berloga
 //
 //  Created by Kostanovsky Andrey on 23.04.2023.
@@ -7,13 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class NavBarController: UINavigationController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
