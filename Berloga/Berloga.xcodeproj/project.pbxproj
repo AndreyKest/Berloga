@@ -8,42 +8,88 @@
 
 /* Begin PBXBuildFile section */
 		A225000729F5C2EC00AD4D1D /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225000629F5C2EC00AD4D1D /* Binding.swift */; };
-		A225000C29F5C3A100AD4D1D /* StrumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225000B29F5C3A100AD4D1D /* StrumViewModel.swift */; };
 		A225000E29F5C3D200AD4D1D /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225000D29F5C3D200AD4D1D /* NavBarController.swift */; };
 		A225001029F5C3E000AD4D1D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225000F29F5C3E000AD4D1D /* TabBarController.swift */; };
 		A225001229F5C40F00AD4D1D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225001129F5C40F00AD4D1D /* BaseViewController.swift */; };
 		A225001829F5C48100AD4D1D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225001729F5C48100AD4D1D /* BaseView.swift */; };
 		A225001A29F5C55B00AD4D1D /* UIColor + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225001929F5C55B00AD4D1D /* UIColor + extension.swift */; };
-		A225001E29F5C7F900AD4D1D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225001D29F5C7F900AD4D1D /* SettingsViewController.swift */; };
-		A225002029F5C80D00AD4D1D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225001F29F5C80D00AD4D1D /* SettingsViewModel.swift */; };
 		A225002429F5CFB700AD4D1D /* TabBarControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225002329F5CFB700AD4D1D /* TabBarControllerBuilder.swift */; };
+		A225002629F70BC100AD4D1D /* StrumIndication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225002529F70BC100AD4D1D /* StrumIndication.swift */; };
+		A225003029F710F400AD4D1D /* UIView + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225002F29F710F400AD4D1D /* UIView + extension.swift */; };
+		A225003429F7199D00AD4D1D /* UserDefaultsFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225003329F7199D00AD4D1D /* UserDefaultsFacade.swift */; };
+		A225003729F719D000AD4D1D /* UserDefaultsSaveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225003629F719D000AD4D1D /* UserDefaultsSaveService.swift */; };
+		A225003929F719FB00AD4D1D /* UserDefaultsFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225003829F719FB00AD4D1D /* UserDefaultsFetchService.swift */; };
+		A225003C29F8619600AD4D1D /* YearsAnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225003B29F8619600AD4D1D /* YearsAnalysisService.swift */; };
+		A225003E29F865E500AD4D1D /* Array + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225003D29F865E500AD4D1D /* Array + extension.swift */; };
+		A225004529F86BFC00AD4D1D /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225004429F86BFC00AD4D1D /* DateService.swift */; };
+		A225004A29F9B2B100AD4D1D /* TestStrumDataAppend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225004929F9B2B100AD4D1D /* TestStrumDataAppend.swift */; };
+		A225005A29FB0A6E00AD4D1D /* MainCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225005929FB0A6E00AD4D1D /* MainCellFactory.swift */; };
 		A225FFE729F5BFDC00AD4D1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225FFE629F5BFDC00AD4D1D /* AppDelegate.swift */; };
 		A225FFE929F5BFDC00AD4D1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225FFE829F5BFDC00AD4D1D /* SceneDelegate.swift */; };
-		A225FFEB29F5BFDC00AD4D1D /* StrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225FFEA29F5BFDC00AD4D1D /* StrumViewController.swift */; };
 		A225FFF029F5BFDD00AD4D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A225FFEF29F5BFDD00AD4D1D /* Assets.xcassets */; };
 		A225FFF329F5BFDD00AD4D1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A225FFF129F5BFDD00AD4D1D /* LaunchScreen.storyboard */; };
 		A225FFFF29F5C18B00AD4D1D /* Resoureces.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225FFFE29F5C18B00AD4D1D /* Resoureces.swift */; };
+		A28AEC912A058F2F004A93A4 /* MeterStrumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AEC902A058F2F004A93A4 /* MeterStrumViewModel.swift */; };
+		A28AEC932A058F35004A93A4 /* MeterStrumIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AEC922A058F35004A93A4 /* MeterStrumIO.swift */; };
+		A28AEC952A058F40004A93A4 /* MeterStrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AEC942A058F40004A93A4 /* MeterStrumViewController.swift */; };
+		A28AEC982A058F5B004A93A4 /* MeterStrumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AEC972A058F5B004A93A4 /* MeterStrumTableViewCell.swift */; };
+		A28AEC9F2A0591DC004A93A4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AEC9E2A0591DC004A93A4 /* Coordinator.swift */; };
+		A28AECA12A0591EA004A93A4 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECA02A0591EA004A93A4 /* Assembly.swift */; };
+		A28AECA42A059537004A93A4 /* StrumUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECA32A059537004A93A4 /* StrumUseCase.swift */; };
+		A28AECAA2A06D771004A93A4 /* MainMenuIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECA92A06D771004A93A4 /* MainMenuIO.swift */; };
+		A28AECAC2A06D780004A93A4 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECAB2A06D780004A93A4 /* MainMenuViewController.swift */; };
+		A28AECAE2A06D78E004A93A4 /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECAD2A06D78E004A93A4 /* MainMenuViewModel.swift */; };
+		A28AECB22A06D7A6004A93A4 /* MainMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECB12A06D7A6004A93A4 /* MainMenuTableViewCell.swift */; };
+		A28AECB42A06E6DE004A93A4 /* CategoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECB32A06E6DE004A93A4 /* CategoryUseCase.swift */; };
+		A28AECB62A06E764004A93A4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECB52A06E764004A93A4 /* Category.swift */; };
+		A28AECBA2A0ADE22004A93A4 /* StrumDateManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECB92A0ADE22004A93A4 /* StrumDateManger.swift */; };
+		A28AECBD2A0D8936004A93A4 /* AddIndicationIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECBC2A0D8936004A93A4 /* AddIndicationIO.swift */; };
+		A28AECBF2A0D8949004A93A4 /* AddIndicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECBE2A0D8949004A93A4 /* AddIndicationViewModel.swift */; };
+		A28AECC12A0D8954004A93A4 /* AddIndicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECC02A0D8953004A93A4 /* AddIndicationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A225000629F5C2EC00AD4D1D /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
-		A225000B29F5C3A100AD4D1D /* StrumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumViewModel.swift; sourceTree = "<group>"; };
 		A225000D29F5C3D200AD4D1D /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		A225000F29F5C3E000AD4D1D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A225001129F5C40F00AD4D1D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A225001729F5C48100AD4D1D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		A225001929F5C55B00AD4D1D /* UIColor + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + extension.swift"; sourceTree = "<group>"; };
-		A225001D29F5C7F900AD4D1D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		A225001F29F5C80D00AD4D1D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		A225002329F5CFB700AD4D1D /* TabBarControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerBuilder.swift; sourceTree = "<group>"; };
+		A225002529F70BC100AD4D1D /* StrumIndication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumIndication.swift; sourceTree = "<group>"; };
+		A225002F29F710F400AD4D1D /* UIView + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + extension.swift"; sourceTree = "<group>"; };
+		A225003329F7199D00AD4D1D /* UserDefaultsFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsFacade.swift; sourceTree = "<group>"; };
+		A225003629F719D000AD4D1D /* UserDefaultsSaveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSaveService.swift; sourceTree = "<group>"; };
+		A225003829F719FB00AD4D1D /* UserDefaultsFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsFetchService.swift; sourceTree = "<group>"; };
+		A225003B29F8619600AD4D1D /* YearsAnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearsAnalysisService.swift; sourceTree = "<group>"; };
+		A225003D29F865E500AD4D1D /* Array + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + extension.swift"; sourceTree = "<group>"; };
+		A225004429F86BFC00AD4D1D /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		A225004929F9B2B100AD4D1D /* TestStrumDataAppend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStrumDataAppend.swift; sourceTree = "<group>"; };
+		A225005929FB0A6E00AD4D1D /* MainCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellFactory.swift; sourceTree = "<group>"; };
 		A225FFE329F5BFDC00AD4D1D /* Berloga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Berloga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A225FFE629F5BFDC00AD4D1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A225FFE829F5BFDC00AD4D1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A225FFEA29F5BFDC00AD4D1D /* StrumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumViewController.swift; sourceTree = "<group>"; };
 		A225FFEF29F5BFDD00AD4D1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A225FFF229F5BFDD00AD4D1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A225FFF429F5BFDD00AD4D1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A225FFFE29F5C18B00AD4D1D /* Resoureces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resoureces.swift; sourceTree = "<group>"; };
+		A28AEC902A058F2F004A93A4 /* MeterStrumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterStrumViewModel.swift; sourceTree = "<group>"; };
+		A28AEC922A058F35004A93A4 /* MeterStrumIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterStrumIO.swift; sourceTree = "<group>"; };
+		A28AEC942A058F40004A93A4 /* MeterStrumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterStrumViewController.swift; sourceTree = "<group>"; };
+		A28AEC972A058F5B004A93A4 /* MeterStrumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterStrumTableViewCell.swift; sourceTree = "<group>"; };
+		A28AEC9E2A0591DC004A93A4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A28AECA02A0591EA004A93A4 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		A28AECA32A059537004A93A4 /* StrumUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumUseCase.swift; sourceTree = "<group>"; };
+		A28AECA92A06D771004A93A4 /* MainMenuIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuIO.swift; sourceTree = "<group>"; };
+		A28AECAB2A06D780004A93A4 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		A28AECAD2A06D78E004A93A4 /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
+		A28AECB12A06D7A6004A93A4 /* MainMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewCell.swift; sourceTree = "<group>"; };
+		A28AECB32A06E6DE004A93A4 /* CategoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryUseCase.swift; sourceTree = "<group>"; };
+		A28AECB52A06E764004A93A4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A28AECB92A0ADE22004A93A4 /* StrumDateManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumDateManger.swift; sourceTree = "<group>"; };
+		A28AECBC2A0D8936004A93A4 /* AddIndicationIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIndicationIO.swift; sourceTree = "<group>"; };
+		A28AECBE2A0D8949004A93A4 /* AddIndicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIndicationViewModel.swift; sourceTree = "<group>"; };
+		A28AECC02A0D8953004A93A4 /* AddIndicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIndicationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,38 +107,19 @@
 			isa = PBXGroup;
 			children = (
 				A225001929F5C55B00AD4D1D /* UIColor + extension.swift */,
+				A225002F29F710F400AD4D1D /* UIView + extension.swift */,
+				A225003D29F865E500AD4D1D /* Array + extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		A225000129F5C1C500AD4D1D /* Model */ = {
+		A225000329F5C1F800AD4D1D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A225003A29F8617000AD4D1D /* DateServices */,
+				A225003129F7177100AD4D1D /* UserDefaultsServices */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		A225000229F5C1CE00AD4D1D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				A225000B29F5C3A100AD4D1D /* StrumViewModel.swift */,
-				A225001F29F5C80D00AD4D1D /* SettingsViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		A225000329F5C1F800AD4D1D /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		A225000429F5C26900AD4D1D /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assembly;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		A225000529F5C2D000AD4D1D /* Binding */ = {
@@ -121,42 +148,10 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		A225001329F5C41600AD4D1D /* StrumView */ = {
-			isa = PBXGroup;
-			children = (
-				A225001429F5C44F00AD4D1D /* View */,
-				A225FFEA29F5BFDC00AD4D1D /* StrumViewController.swift */,
-			);
-			path = StrumView;
-			sourceTree = "<group>";
-		};
-		A225001429F5C44F00AD4D1D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		A225001629F5C47800AD4D1D /* View */ = {
 			isa = PBXGroup;
 			children = (
 				A225001729F5C48100AD4D1D /* BaseView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A225001B29F5C7C900AD4D1D /* SettingsView */ = {
-			isa = PBXGroup;
-			children = (
-				A225001C29F5C7E100AD4D1D /* View */,
-				A225001D29F5C7F900AD4D1D /* SettingsViewController.swift */,
-			);
-			path = SettingsView;
-			sourceTree = "<group>";
-		};
-		A225001C29F5C7E100AD4D1D /* View */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +170,72 @@
 				A225002329F5CFB700AD4D1D /* TabBarControllerBuilder.swift */,
 			);
 			path = TabBarControllerBuilder;
+			sourceTree = "<group>";
+		};
+		A225003129F7177100AD4D1D /* UserDefaultsServices */ = {
+			isa = PBXGroup;
+			children = (
+				A225003629F719D000AD4D1D /* UserDefaultsSaveService.swift */,
+				A225003829F719FB00AD4D1D /* UserDefaultsFetchService.swift */,
+			);
+			path = UserDefaultsServices;
+			sourceTree = "<group>";
+		};
+		A225003229F7197C00AD4D1D /* Facades */ = {
+			isa = PBXGroup;
+			children = (
+				A225003529F719A000AD4D1D /* UserDefaultsFacade */,
+			);
+			path = Facades;
+			sourceTree = "<group>";
+		};
+		A225003529F719A000AD4D1D /* UserDefaultsFacade */ = {
+			isa = PBXGroup;
+			children = (
+				A225003329F7199D00AD4D1D /* UserDefaultsFacade.swift */,
+			);
+			path = UserDefaultsFacade;
+			sourceTree = "<group>";
+		};
+		A225003A29F8617000AD4D1D /* DateServices */ = {
+			isa = PBXGroup;
+			children = (
+				A225003B29F8619600AD4D1D /* YearsAnalysisService.swift */,
+				A225004429F86BFC00AD4D1D /* DateService.swift */,
+			);
+			path = DateServices;
+			sourceTree = "<group>";
+		};
+		A225004029F8698C00AD4D1D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A225004129F8699700AD4D1D /* StrumDataManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A225004129F8699700AD4D1D /* StrumDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A28AECB92A0ADE22004A93A4 /* StrumDateManger.swift */,
+			);
+			path = StrumDataManager;
+			sourceTree = "<group>";
+		};
+		A225005729FB0A4400AD4D1D /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				A225005829FB0A5100AD4D1D /* StrumFactory */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		A225005829FB0A5100AD4D1D /* StrumFactory */ = {
+			isa = PBXGroup;
+			children = (
+				A225005929FB0A6E00AD4D1D /* MainCellFactory.swift */,
+			);
+			path = StrumFactory;
 			sourceTree = "<group>";
 		};
 		A225FFDA29F5BFDC00AD4D1D = {
@@ -197,15 +258,11 @@
 			isa = PBXGroup;
 			children = (
 				A225FFFB29F5C01C00AD4D1D /* Application */,
-				A225000429F5C26900AD4D1D /* Assembly */,
 				A225FFFD29F5C16F00AD4D1D /* Helper */,
-				A225000529F5C2D000AD4D1D /* Binding */,
-				A225000329F5C1F800AD4D1D /* Service */,
-				A225002129F5CBDB00AD4D1D /* Builder */,
-				A225000129F5C1C500AD4D1D /* Model */,
-				A225FFFC29F5C02900AD4D1D /* View */,
-				A225001B29F5C7C900AD4D1D /* SettingsView */,
-				A225000229F5C1CE00AD4D1D /* ViewModel */,
+				A28AECA52A059653004A93A4 /* Common */,
+				A28AEC8D2A058EEA004A93A4 /* Domain */,
+				A28AEC892A058D6F004A93A4 /* Presentation */,
+				A28AEC9B2A059176004A93A4 /* Data */,
 				A225FFFA29F5C00800AD4D1D /* Supporting files */,
 			);
 			path = Berloga;
@@ -226,18 +283,10 @@
 			children = (
 				A225FFE629F5BFDC00AD4D1D /* AppDelegate.swift */,
 				A225FFE829F5BFDC00AD4D1D /* SceneDelegate.swift */,
+				A28AECA02A0591EA004A93A4 /* Assembly.swift */,
+				A28AEC9E2A0591DC004A93A4 /* Coordinator.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		A225FFFC29F5C02900AD4D1D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A225000829F5C36400AD4D1D /* Base */,
-				A225000929F5C36B00AD4D1D /* Navigation */,
-				A225001329F5C41600AD4D1D /* StrumView */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		A225FFFD29F5C16F00AD4D1D /* Helper */ = {
@@ -245,8 +294,116 @@
 			children = (
 				A225FFFE29F5C18B00AD4D1D /* Resoureces.swift */,
 				A225000029F5C1A000AD4D1D /* Extension */,
+				A225004929F9B2B100AD4D1D /* TestStrumDataAppend.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		A28AEC892A058D6F004A93A4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A28AECA82A06D75D004A93A4 /* MainMenu */,
+				A28AEC8A2A058D88004A93A4 /* MeterStrum */,
+				A28AECBB2A0D88EB004A93A4 /* AddIndication */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A28AEC8A2A058D88004A93A4 /* MeterStrum */ = {
+			isa = PBXGroup;
+			children = (
+				A28AEC922A058F35004A93A4 /* MeterStrumIO.swift */,
+				A28AEC902A058F2F004A93A4 /* MeterStrumViewModel.swift */,
+				A28AEC942A058F40004A93A4 /* MeterStrumViewController.swift */,
+				A28AEC962A058F46004A93A4 /* Cell */,
+			);
+			path = MeterStrum;
+			sourceTree = "<group>";
+		};
+		A28AEC8D2A058EEA004A93A4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A28AECA62A059792004A93A4 /* Entities */,
+				A28AECA22A059344004A93A4 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A28AEC962A058F46004A93A4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A28AEC972A058F5B004A93A4 /* MeterStrumTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A28AEC9B2A059176004A93A4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A225005729FB0A4400AD4D1D /* Factory */,
+				A225004029F8698C00AD4D1D /* Manager */,
+				A225002129F5CBDB00AD4D1D /* Builder */,
+				A225000329F5C1F800AD4D1D /* Services */,
+				A225003229F7197C00AD4D1D /* Facades */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A28AECA22A059344004A93A4 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				A28AECA32A059537004A93A4 /* StrumUseCase.swift */,
+				A28AECB32A06E6DE004A93A4 /* CategoryUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		A28AECA52A059653004A93A4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A225000829F5C36400AD4D1D /* Base */,
+				A225000929F5C36B00AD4D1D /* Navigation */,
+				A225000529F5C2D000AD4D1D /* Binding */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A28AECA62A059792004A93A4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A225002529F70BC100AD4D1D /* StrumIndication.swift */,
+				A28AECB52A06E764004A93A4 /* Category.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A28AECA82A06D75D004A93A4 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A28AECA92A06D771004A93A4 /* MainMenuIO.swift */,
+				A28AECAD2A06D78E004A93A4 /* MainMenuViewModel.swift */,
+				A28AECAB2A06D780004A93A4 /* MainMenuViewController.swift */,
+				A28AECAF2A06D790004A93A4 /* Cell */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		A28AECAF2A06D790004A93A4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A28AECB12A06D7A6004A93A4 /* MainMenuTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A28AECBB2A0D88EB004A93A4 /* AddIndication */ = {
+			isa = PBXGroup;
+			children = (
+				A28AECBC2A0D8936004A93A4 /* AddIndicationIO.swift */,
+				A28AECBE2A0D8949004A93A4 /* AddIndicationViewModel.swift */,
+				A28AECC02A0D8953004A93A4 /* AddIndicationViewController.swift */,
+			);
+			path = AddIndication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,20 +476,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A28AECAE2A06D78E004A93A4 /* MainMenuViewModel.swift in Sources */,
+				A225003729F719D000AD4D1D /* UserDefaultsSaveService.swift in Sources */,
 				A225002429F5CFB700AD4D1D /* TabBarControllerBuilder.swift in Sources */,
-				A225FFEB29F5BFDC00AD4D1D /* StrumViewController.swift in Sources */,
+				A28AEC932A058F35004A93A4 /* MeterStrumIO.swift in Sources */,
 				A225001029F5C3E000AD4D1D /* TabBarController.swift in Sources */,
+				A225002629F70BC100AD4D1D /* StrumIndication.swift in Sources */,
+				A28AECA12A0591EA004A93A4 /* Assembly.swift in Sources */,
 				A225FFE729F5BFDC00AD4D1D /* AppDelegate.swift in Sources */,
 				A225FFE929F5BFDC00AD4D1D /* SceneDelegate.swift in Sources */,
+				A28AEC982A058F5B004A93A4 /* MeterStrumTableViewCell.swift in Sources */,
+				A225003E29F865E500AD4D1D /* Array + extension.swift in Sources */,
+				A28AECB62A06E764004A93A4 /* Category.swift in Sources */,
+				A225003929F719FB00AD4D1D /* UserDefaultsFetchService.swift in Sources */,
 				A225000E29F5C3D200AD4D1D /* NavBarController.swift in Sources */,
+				A28AEC9F2A0591DC004A93A4 /* Coordinator.swift in Sources */,
+				A225005A29FB0A6E00AD4D1D /* MainCellFactory.swift in Sources */,
+				A28AECB42A06E6DE004A93A4 /* CategoryUseCase.swift in Sources */,
 				A225001229F5C40F00AD4D1D /* BaseViewController.swift in Sources */,
+				A225004529F86BFC00AD4D1D /* DateService.swift in Sources */,
+				A225003C29F8619600AD4D1D /* YearsAnalysisService.swift in Sources */,
+				A28AECC12A0D8954004A93A4 /* AddIndicationViewController.swift in Sources */,
+				A28AEC912A058F2F004A93A4 /* MeterStrumViewModel.swift in Sources */,
 				A225FFFF29F5C18B00AD4D1D /* Resoureces.swift in Sources */,
+				A28AECBF2A0D8949004A93A4 /* AddIndicationViewModel.swift in Sources */,
+				A28AECBD2A0D8936004A93A4 /* AddIndicationIO.swift in Sources */,
 				A225001829F5C48100AD4D1D /* BaseView.swift in Sources */,
-				A225002029F5C80D00AD4D1D /* SettingsViewModel.swift in Sources */,
-				A225000C29F5C3A100AD4D1D /* StrumViewModel.swift in Sources */,
+				A28AEC952A058F40004A93A4 /* MeterStrumViewController.swift in Sources */,
+				A28AECBA2A0ADE22004A93A4 /* StrumDateManger.swift in Sources */,
+				A225003429F7199D00AD4D1D /* UserDefaultsFacade.swift in Sources */,
+				A28AECAC2A06D780004A93A4 /* MainMenuViewController.swift in Sources */,
 				A225001A29F5C55B00AD4D1D /* UIColor + extension.swift in Sources */,
+				A28AECA42A059537004A93A4 /* StrumUseCase.swift in Sources */,
+				A225004A29F9B2B100AD4D1D /* TestStrumDataAppend.swift in Sources */,
+				A28AECAA2A06D771004A93A4 /* MainMenuIO.swift in Sources */,
 				A225000729F5C2EC00AD4D1D /* Binding.swift in Sources */,
-				A225001E29F5C7F900AD4D1D /* SettingsViewController.swift in Sources */,
+				A28AECB22A06D7A6004A93A4 /* MainMenuTableViewCell.swift in Sources */,
+				A225003029F710F400AD4D1D /* UIView + extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

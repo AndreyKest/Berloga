@@ -18,7 +18,7 @@ class BaseController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
-        constraintViews()
+        constraintsViews()
         configureAppearance()
     }
 }
@@ -27,7 +27,7 @@ class BaseController: UIViewController {
     
     func setupViews() {}
     
-    func constraintViews() {}
+    func constraintsViews() {}
     
     func configureAppearance() {
         view.backgroundColor = R.Colors.background
@@ -46,8 +46,8 @@ extension BaseController {
     func addNavBarButton(at position: NavBarPosition, with title: String) {
         let button = UIButton(type: .system)
         button.setTitle(title, for: .normal)
-        button.setTitleColor(R.Colors.active, for: .normal)
-        button.setTitleColor(R.Colors.inactive, for: .disabled)
+        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.gray, for: .disabled)
         button.titleLabel?.font = R.Fonts.helveticaRegular(with: 17)
         
         switch position {
