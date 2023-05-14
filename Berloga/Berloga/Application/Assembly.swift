@@ -33,9 +33,9 @@ class Assembly {
         return view
     }
     
-    func makeAddIndication(output: AddIndicationOutput) -> BaseController {
-        let viewModel = AddIndicationViewModel(output: output)
-        let view = AddIndicationViewController(viewModel: viewModel)
+    func makeIndication(output: IndicationOutput, input: IndicationInput) -> BaseController {
+        let viewModel = IndicationViewModel(output: output, input: input)
+        let view = IndicationViewController(viewModel: viewModel)
         return view
     }
 }

@@ -132,7 +132,7 @@ class MeterStrumTableViewCell: UITableViewCell {
     }
     
     private func configureAppearance() {
-        backgroundColor = UIColor(hexString: "#363B47")
+        backgroundColor = R.Colors.cellColor
         let backgroundColorView = UIView()
         backgroundColorView.backgroundColor = UIColor(hexString: "#3A393B")
         

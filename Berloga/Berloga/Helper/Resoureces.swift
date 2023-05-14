@@ -13,7 +13,7 @@ enum R {
         static let active = UIColor(hexString: "#437BFE")
         static let inactive = UIColor(hexString: "#929DA5")
         
-        static let background = UIColor(hexString: "#F8F9F9")
+        static let background = UIColor(hexString: "#010B19")
         static let separator = UIColor(hexString: "#E8ECEF")
         static let secondary = UIColor(hexString: "#F0F3FF")
         
@@ -21,6 +21,8 @@ enum R {
         
         static let navBarBackgorund = UIColor(hexString: "272E3D")
         static let navBarTextColor = UIColor.white
+        
+        static let cellColor = UIColor(hexString: "#363B47")
         
         
     }

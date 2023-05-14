@@ -52,7 +52,7 @@ class MeterStrumViewController: BaseController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(MeterStrumTableViewCell.self, forCellReuseIdentifier: Constants.meterStrumTableViewCellIdentifier)
-        tableView.backgroundColor = UIColor(hexString: "#010B19")
+        tableView.backgroundColor = R.Colors.background
     }
     
 }

@@ -43,9 +43,10 @@
 		A28AECB42A06E6DE004A93A4 /* CategoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECB32A06E6DE004A93A4 /* CategoryUseCase.swift */; };
 		A28AECB62A06E764004A93A4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECB52A06E764004A93A4 /* Category.swift */; };
 		A28AECBA2A0ADE22004A93A4 /* StrumDateManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECB92A0ADE22004A93A4 /* StrumDateManger.swift */; };
-		A28AECBD2A0D8936004A93A4 /* AddIndicationIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECBC2A0D8936004A93A4 /* AddIndicationIO.swift */; };
-		A28AECBF2A0D8949004A93A4 /* AddIndicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECBE2A0D8949004A93A4 /* AddIndicationViewModel.swift */; };
-		A28AECC12A0D8954004A93A4 /* AddIndicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECC02A0D8953004A93A4 /* AddIndicationViewController.swift */; };
+		A28AECBD2A0D8936004A93A4 /* IndicationIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECBC2A0D8936004A93A4 /* IndicationIO.swift */; };
+		A28AECBF2A0D8949004A93A4 /* IndicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECBE2A0D8949004A93A4 /* IndicationViewModel.swift */; };
+		A28AECC12A0D8954004A93A4 /* IndicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECC02A0D8953004A93A4 /* IndicationViewController.swift */; };
+		A28AECC32A0ECC78004A93A4 /* UIDatePicker + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECC22A0ECC78004A93A4 /* UIDatePicker + extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,9 +88,10 @@
 		A28AECB32A06E6DE004A93A4 /* CategoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryUseCase.swift; sourceTree = "<group>"; };
 		A28AECB52A06E764004A93A4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A28AECB92A0ADE22004A93A4 /* StrumDateManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrumDateManger.swift; sourceTree = "<group>"; };
-		A28AECBC2A0D8936004A93A4 /* AddIndicationIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIndicationIO.swift; sourceTree = "<group>"; };
-		A28AECBE2A0D8949004A93A4 /* AddIndicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIndicationViewModel.swift; sourceTree = "<group>"; };
-		A28AECC02A0D8953004A93A4 /* AddIndicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIndicationViewController.swift; sourceTree = "<group>"; };
+		A28AECBC2A0D8936004A93A4 /* IndicationIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicationIO.swift; sourceTree = "<group>"; };
+		A28AECBE2A0D8949004A93A4 /* IndicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicationViewModel.swift; sourceTree = "<group>"; };
+		A28AECC02A0D8953004A93A4 /* IndicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicationViewController.swift; sourceTree = "<group>"; };
+		A28AECC22A0ECC78004A93A4 /* UIDatePicker + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDatePicker + extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				A225001929F5C55B00AD4D1D /* UIColor + extension.swift */,
 				A225002F29F710F400AD4D1D /* UIView + extension.swift */,
 				A225003D29F865E500AD4D1D /* Array + extension.swift */,
+				A28AECC22A0ECC78004A93A4 /* UIDatePicker + extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -399,9 +402,9 @@
 		A28AECBB2A0D88EB004A93A4 /* AddIndication */ = {
 			isa = PBXGroup;
 			children = (
-				A28AECBC2A0D8936004A93A4 /* AddIndicationIO.swift */,
-				A28AECBE2A0D8949004A93A4 /* AddIndicationViewModel.swift */,
-				A28AECC02A0D8953004A93A4 /* AddIndicationViewController.swift */,
+				A28AECBC2A0D8936004A93A4 /* IndicationIO.swift */,
+				A28AECBE2A0D8949004A93A4 /* IndicationViewModel.swift */,
+				A28AECC02A0D8953004A93A4 /* IndicationViewController.swift */,
 			);
 			path = AddIndication;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				A225FFE929F5BFDC00AD4D1D /* SceneDelegate.swift in Sources */,
 				A28AEC982A058F5B004A93A4 /* MeterStrumTableViewCell.swift in Sources */,
 				A225003E29F865E500AD4D1D /* Array + extension.swift in Sources */,
+				A28AECC32A0ECC78004A93A4 /* UIDatePicker + extension.swift in Sources */,
 				A28AECB62A06E764004A93A4 /* Category.swift in Sources */,
 				A225003929F719FB00AD4D1D /* UserDefaultsFetchService.swift in Sources */,
 				A225000E29F5C3D200AD4D1D /* NavBarController.swift in Sources */,
@@ -496,11 +500,11 @@
 				A225001229F5C40F00AD4D1D /* BaseViewController.swift in Sources */,
 				A225004529F86BFC00AD4D1D /* DateService.swift in Sources */,
 				A225003C29F8619600AD4D1D /* YearsAnalysisService.swift in Sources */,
-				A28AECC12A0D8954004A93A4 /* AddIndicationViewController.swift in Sources */,
+				A28AECC12A0D8954004A93A4 /* IndicationViewController.swift in Sources */,
 				A28AEC912A058F2F004A93A4 /* MeterStrumViewModel.swift in Sources */,
 				A225FFFF29F5C18B00AD4D1D /* Resoureces.swift in Sources */,
-				A28AECBF2A0D8949004A93A4 /* AddIndicationViewModel.swift in Sources */,
-				A28AECBD2A0D8936004A93A4 /* AddIndicationIO.swift in Sources */,
+				A28AECBF2A0D8949004A93A4 /* IndicationViewModel.swift in Sources */,
+				A28AECBD2A0D8936004A93A4 /* IndicationIO.swift in Sources */,
 				A225001829F5C48100AD4D1D /* BaseView.swift in Sources */,
 				A28AEC952A058F40004A93A4 /* MeterStrumViewController.swift in Sources */,
 				A28AECBA2A0ADE22004A93A4 /* StrumDateManger.swift in Sources */,

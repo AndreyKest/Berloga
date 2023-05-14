@@ -56,7 +56,7 @@ class MainMenuViewController: BaseController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(MainMenuTableViewCell.self, forCellReuseIdentifier: Constants.mainMenuTableViewCellIdentifier)
-        tableView.backgroundColor = UIColor(hexString: "#010B19")
+        tableView.backgroundColor = R.Colors.background
     }
 }
 

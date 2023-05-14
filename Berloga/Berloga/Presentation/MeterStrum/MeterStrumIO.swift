@@ -15,4 +15,7 @@ protocol MeterStrumOutput: AnyObject {
 
 //MARK: - MeterStrumInput
 
-protocol MeterStrumInput: AnyObject { }
+protocol MeterStrumInput: AnyObject {
+    
+    func addIndication(_ indication: StrumIndication)
+}

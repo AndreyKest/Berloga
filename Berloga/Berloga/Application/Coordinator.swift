@@ -45,12 +45,23 @@ extension Coordinator: MainMenuOutput {
 
 extension Coordinator: MeterStrumOutput {
     func showNewIndication() {
-        let newIndication = assembly.makeAddIndication(output: self)
+        let newIndication = assembly.makeIndication(output: self, input: self)
+        
         navigationViewController?.pushViewController(newIndication, animated: true)
     }
 }
 
-extension Coordinator: AddIndicationOutput {
+extension Coordinator: IndicationOutput {
+    func didAddIndication() {
+        navigationViewController?.popViewController(animated: true)
+    }
+}
+
+extension Coordinator: IndicationInput {
+    func saveNewIndication(_ indication: StrumIndication) {
+        print("\(indication.dayMeter) - in coordinator")
+    }
+    
     
 }
 

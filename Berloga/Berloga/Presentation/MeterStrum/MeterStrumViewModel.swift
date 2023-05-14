@@ -25,10 +25,10 @@ protocol MeterStrumViewModelInterface {
 class MeterStrumViewModel {
     
     private weak var output: MeterStrumOutput?
+    private weak var input: MeterStrumInput?
     
     private let useCase: StrumUseCase
     private let dateManager: StrumDateManger
-    
     
     private var strumIndication: [StrumIndication] = []
     private var yearsArray: [String] = []
@@ -39,7 +39,9 @@ class MeterStrumViewModel {
         self.output = output
         self.useCase = useCase
         self.dateManager = dateManager
+        
     }
+    
     
     
 }
@@ -82,9 +84,16 @@ extension MeterStrumViewModel: MeterStrumViewModelInterface {
     func rowTaped(_ section: Int, row: Int) {
         
     }
+    
     func addNewIndication() {
         output?.showNewIndication()
     }
 }
 
-
+extension MeterStrumViewModel: IndicationInput {
+    func saveNewIndication(_ indication: StrumIndication) {
+        print("Print in metter")
+    }
+    
+    
+}
