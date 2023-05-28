@@ -22,7 +22,6 @@
 		A225003C29F8619600AD4D1D /* YearsAnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225003B29F8619600AD4D1D /* YearsAnalysisService.swift */; };
 		A225003E29F865E500AD4D1D /* Array + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225003D29F865E500AD4D1D /* Array + extension.swift */; };
 		A225004529F86BFC00AD4D1D /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225004429F86BFC00AD4D1D /* DateService.swift */; };
-		A225004A29F9B2B100AD4D1D /* TestStrumDataAppend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225004929F9B2B100AD4D1D /* TestStrumDataAppend.swift */; };
 		A225005A29FB0A6E00AD4D1D /* MainCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225005929FB0A6E00AD4D1D /* MainCellFactory.swift */; };
 		A225FFE729F5BFDC00AD4D1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225FFE629F5BFDC00AD4D1D /* AppDelegate.swift */; };
 		A225FFE929F5BFDC00AD4D1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A225FFE829F5BFDC00AD4D1D /* SceneDelegate.swift */; };
@@ -47,6 +46,9 @@
 		A28AECBF2A0D8949004A93A4 /* IndicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECBE2A0D8949004A93A4 /* IndicationViewModel.swift */; };
 		A28AECC12A0D8954004A93A4 /* IndicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECC02A0D8953004A93A4 /* IndicationViewController.swift */; };
 		A28AECC32A0ECC78004A93A4 /* UIDatePicker + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECC22A0ECC78004A93A4 /* UIDatePicker + extension.swift */; };
+		A28AECC62A155E19004A93A4 /* IndicationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECC52A155E19004A93A4 /* IndicationRepository.swift */; };
+		A28AECC92A16C2F1004A93A4 /* PrepareIndicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECC82A16C2F1004A93A4 /* PrepareIndicationService.swift */; };
+		A28AECCC2A1AA9F3004A93A4 /* DefaultAllertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECCB2A1AA9F3004A93A4 /* DefaultAllertFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +67,6 @@
 		A225003B29F8619600AD4D1D /* YearsAnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearsAnalysisService.swift; sourceTree = "<group>"; };
 		A225003D29F865E500AD4D1D /* Array + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + extension.swift"; sourceTree = "<group>"; };
 		A225004429F86BFC00AD4D1D /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
-		A225004929F9B2B100AD4D1D /* TestStrumDataAppend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStrumDataAppend.swift; sourceTree = "<group>"; };
 		A225005929FB0A6E00AD4D1D /* MainCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellFactory.swift; sourceTree = "<group>"; };
 		A225FFE329F5BFDC00AD4D1D /* Berloga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Berloga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A225FFE629F5BFDC00AD4D1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +93,9 @@
 		A28AECBE2A0D8949004A93A4 /* IndicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicationViewModel.swift; sourceTree = "<group>"; };
 		A28AECC02A0D8953004A93A4 /* IndicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicationViewController.swift; sourceTree = "<group>"; };
 		A28AECC22A0ECC78004A93A4 /* UIDatePicker + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDatePicker + extension.swift"; sourceTree = "<group>"; };
+		A28AECC52A155E19004A93A4 /* IndicationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicationRepository.swift; sourceTree = "<group>"; };
+		A28AECC82A16C2F1004A93A4 /* PrepareIndicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareIndicationService.swift; sourceTree = "<group>"; };
+		A28AECCB2A1AA9F3004A93A4 /* DefaultAllertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAllertFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 		A225000329F5C1F800AD4D1D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A28AECC72A16C2CE004A93A4 /* PrepareIndicationService */,
 				A225003A29F8617000AD4D1D /* DateServices */,
 				A225003129F7177100AD4D1D /* UserDefaultsServices */,
 			);
@@ -228,6 +233,7 @@
 		A225005729FB0A4400AD4D1D /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				A28AECCA2A1AA9DF004A93A4 /* DefaultAllertFactory */,
 				A225005829FB0A5100AD4D1D /* StrumFactory */,
 			);
 			path = Factory;
@@ -297,7 +303,6 @@
 			children = (
 				A225FFFE29F5C18B00AD4D1D /* Resoureces.swift */,
 				A225000029F5C1A000AD4D1D /* Extension */,
-				A225004929F9B2B100AD4D1D /* TestStrumDataAppend.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				A28AECA62A059792004A93A4 /* Entities */,
+				A28AECC42A155DF8004A93A4 /* Repositories */,
 				A28AECA22A059344004A93A4 /* UseCases */,
 			);
 			path = Domain;
@@ -407,6 +413,30 @@
 				A28AECC02A0D8953004A93A4 /* IndicationViewController.swift */,
 			);
 			path = AddIndication;
+			sourceTree = "<group>";
+		};
+		A28AECC42A155DF8004A93A4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A28AECC52A155E19004A93A4 /* IndicationRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A28AECC72A16C2CE004A93A4 /* PrepareIndicationService */ = {
+			isa = PBXGroup;
+			children = (
+				A28AECC82A16C2F1004A93A4 /* PrepareIndicationService.swift */,
+			);
+			path = PrepareIndicationService;
+			sourceTree = "<group>";
+		};
+		A28AECCA2A1AA9DF004A93A4 /* DefaultAllertFactory */ = {
+			isa = PBXGroup;
+			children = (
+				A28AECCB2A1AA9F3004A93A4 /* DefaultAllertFactory.swift */,
+			);
+			path = DefaultAllertFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,10 +539,12 @@
 				A28AEC952A058F40004A93A4 /* MeterStrumViewController.swift in Sources */,
 				A28AECBA2A0ADE22004A93A4 /* StrumDateManger.swift in Sources */,
 				A225003429F7199D00AD4D1D /* UserDefaultsFacade.swift in Sources */,
+				A28AECCC2A1AA9F3004A93A4 /* DefaultAllertFactory.swift in Sources */,
 				A28AECAC2A06D780004A93A4 /* MainMenuViewController.swift in Sources */,
+				A28AECC92A16C2F1004A93A4 /* PrepareIndicationService.swift in Sources */,
 				A225001A29F5C55B00AD4D1D /* UIColor + extension.swift in Sources */,
 				A28AECA42A059537004A93A4 /* StrumUseCase.swift in Sources */,
-				A225004A29F9B2B100AD4D1D /* TestStrumDataAppend.swift in Sources */,
+				A28AECC62A155E19004A93A4 /* IndicationRepository.swift in Sources */,
 				A28AECAA2A06D771004A93A4 /* MainMenuIO.swift in Sources */,
 				A225000729F5C2EC00AD4D1D /* Binding.swift in Sources */,
 				A28AECB22A06D7A6004A93A4 /* MainMenuTableViewCell.swift in Sources */,

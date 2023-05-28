@@ -19,7 +19,6 @@ private enum Constants {
 //MARK: - MeterStrumViewControllerInterface
 
 protocol MeterStrumViewControllerInterface: AnyObject {
-    
 }
 
 //MARK: - MeterStrumViewController
@@ -27,6 +26,14 @@ protocol MeterStrumViewControllerInterface: AnyObject {
 class MeterStrumViewController: BaseController {
     
     private let viewModel: MeterStrumViewModelInterface
+    
+    private func setupBinding() {
+            viewModel.tableData.bind { [weak self] _ in
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            }
+        }
     
     let tableView = UITableView()
     
@@ -46,6 +53,23 @@ class MeterStrumViewController: BaseController {
         
         viewModel.viewDidLoad()
         setupTableView()
+        setupBinding()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        switch viewModel.checkUpdate() {
+            
+        case .add:
+            viewModel.updateIndication()
+        case .change:
+            break
+        case .delete:
+            print("Was delete")
+        case .none:
+            break
+        }
     }
     
     private func setupTableView() {
@@ -92,27 +116,28 @@ extension MeterStrumViewController {
 extension MeterStrumViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        viewModel.tableData.count
+        viewModel.tableData.value.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.tableData[section].row.count
+        viewModel.tableData.value[section].row.count
         
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        viewModel.tableData[section].section
+        viewModel.tableData.value[section].section
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.meterStrumTableViewCellIdentifier, for: indexPath) as? MeterStrumTableViewCell else { return UITableViewCell() }
-        cell.setup(with: viewModel.tableData[indexPath.section].row[indexPath.row])
+        cell.setup(with: viewModel.tableData.value[indexPath.section].row[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.rowTaped(indexPath.section, row: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -123,9 +148,29 @@ extension MeterStrumViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
+//MARK: - Swipe delete data extension
+
+extension MeterStrumViewController {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let indication = viewModel.tableData.value[indexPath.section].row[indexPath.row]
+        if indication.dayMeter != nil && indication.nightMeter != nil {
+            let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
+                let strumIndication = StrumIndication(dayMeter: indication.dayMeter ?? 0, nightMeter: indication.nightMeter ?? 0, transferDate: indication.transferDate ?? Date())
+                self.viewModel.deleteAllert(indication: strumIndication)
+                handler(true)
+            }
+            deleteAction.backgroundColor = .red
+            let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+            configuration.performsFirstActionWithFullSwipe = false
+            return configuration
+        } else {
+            return nil
+        }
+    }
+}
+
 //MARK: - MeterStrumViewControllerInterface
 
 extension MeterStrumViewController: MeterStrumViewControllerInterface {
-    
 }
-

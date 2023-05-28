@@ -23,6 +23,7 @@ struct MeterStrumTableViewModel {
     let dayMeter: Int?
     let nightMeter: Int?
     let diferencePrice: Float?
+    let transferDate: Date?
 }
 
 //MARK: - StudenTableViewCell
@@ -90,6 +91,8 @@ class MeterStrumTableViewCell: UITableViewCell {
         nightMeterDataLabel.text = ""
         monthLabel.textColor = .gray
         monthDifferenceCount.text = ""
+        dayMeterLabel.textColor = .gray
+        nightMeterLabel.textColor = .gray
     }
     
     private func setupViews() {
@@ -149,6 +152,8 @@ class MeterStrumTableViewCell: UITableViewCell {
         } else {
             dayMeterDataLabel.text = ""
             nightMeterDataLabel.text = ""
+            dayMeterLabel.textColor = .clear
+            nightMeterLabel.textColor = .clear
         }
     }
 }

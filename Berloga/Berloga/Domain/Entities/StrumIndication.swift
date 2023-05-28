@@ -8,13 +8,13 @@
 import Foundation
 
 protocol StringData: Equatable {
-    var transferDate: String { get }
+    var transferDate: Date { get }
 }
 
 struct StrumIndication: Codable, Equatable, StringData {
     var dayMeter: Int
     var nightMeter: Int
-    var transferDate: String
+    var transferDate: Date
     
     static func == (lhs: StrumIndication, rhs: StrumIndication) -> Bool {
         return lhs.transferDate == rhs.transferDate

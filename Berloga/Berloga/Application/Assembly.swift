@@ -9,6 +9,8 @@ import UIKit
 
 class Assembly {
     
+    private let indicationRepository: IndicationRepository
+    
     lazy var categoryAssembly: CategoryUseCase = {
         CategoryUseCaseImpl()
     }()
@@ -17,9 +19,9 @@ class Assembly {
         StrumUseCaseImpl()
     }()
     
-    lazy var dateManager: StrumDateManger = {
-        StrumDateMangerImpl()
-    }()
+    init(indicationRepository: IndicationRepository) {
+        self.indicationRepository = indicationRepository
+    }
     
     func makeMainMenu(output: MainMenuOutput) -> BaseController {
         let viewModel = MainMenuViewModel(output: output, useCase: categoryAssembly)
@@ -27,14 +29,19 @@ class Assembly {
         return view
     }
     
-    func makeMeterStrum(output: MeterStrumOutput) -> BaseController {
-        let viewModel = MeterStrumViewModel(output: output, useCase: meterAssembly, dateManager: dateManager)
+    func makeMeterStrum(viewModel: MeterStrumViewModelInterface) -> BaseController {
         let view = MeterStrumViewController(viewModel: viewModel)
         return view
     }
     
-    func makeIndication(output: IndicationOutput, input: IndicationInput) -> BaseController {
-        let viewModel = IndicationViewModel(output: output, input: input)
+    func makeIndication(output: IndicationOutput) -> BaseController {
+        let viewModel = IndicationViewModel(output: output, indicationRepository: indicationRepository, currentMonth: Date())
+        let view = IndicationViewController(viewModel: viewModel)
+        return view
+    }
+    
+    func makeDetailIndication(output: IndicationOutput, indication: StrumIndication?, currentMonth: Date) -> BaseController {
+        let viewModel = IndicationViewModel(output: output, indicationRepository: indicationRepository, indication: indication, currentMonth: currentMonth)
         let view = IndicationViewController(viewModel: viewModel)
         return view
     }

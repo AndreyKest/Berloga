@@ -10,11 +10,10 @@ import Foundation
 //MARK: - IndicationOutput
 
 protocol IndicationOutput: AnyObject {
-    func didAddIndication()
+    func saveNewIndicationAndBack()
 }
 
 //MARK: - IndicationInput
 
 protocol IndicationInput: AnyObject {
-    func saveNewIndication(_ indication: StrumIndication)
 }

@@ -9,14 +9,28 @@ import UIKit
 
 //MARK: - Coordinator
 
+
 class Coordinator {
     
     private let assembly: Assembly
     
     private var navigationViewController: NavBarController?
     
-    init(assembly: Assembly) {
+    private let repository: IndicationRepository
+    
+    lazy var meterAssembly: StrumUseCase = {
+        StrumUseCaseImpl()
+    }()
+    
+    lazy var meterStrumViewModel: MeterStrumViewModelInterface = {
+        MeterStrumViewModel(output: self, useCase: meterAssembly, indicationRepository: repository)
+    }()
+    
+    private lazy var defaultAllertFactory: DefaultAllertFactory = DefaultAllertFactoryImpl()
+    
+    init(assembly: Assembly, repository: IndicationRepository = IndicationRepositoryImpl.shared) {
         self.assembly = assembly
+        self.repository = repository
     }
     
     func start(window: UIWindow) {
@@ -30,7 +44,7 @@ class Coordinator {
 //MARK: - MainMenuOutput
 extension Coordinator: MainMenuOutput {
     func showStrum() {
-        let strum = assembly.makeMeterStrum(output: self)
+        let strum = assembly.makeMeterStrum(viewModel: meterStrumViewModel)
         navigationViewController?.pushViewController(strum, animated: true)
     }
     func showSettings() {
@@ -44,25 +58,38 @@ extension Coordinator: MainMenuOutput {
 }
 
 extension Coordinator: MeterStrumOutput {
+    
     func showNewIndication() {
-        let newIndication = assembly.makeIndication(output: self, input: self)
-        
+        let newIndication = assembly.makeIndication(output: self)
         navigationViewController?.pushViewController(newIndication, animated: true)
     }
+    
+    
+    func showDeleteAllert(indication: StrumIndication) {
+        let allert = defaultAllertFactory.getAllert(by: .deleteAllert)
+        navigationViewController?.present(allert, animated: true)
+        
+        if let alertController = allert as? UIAlertController {
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
+                self?.repository.deleteAction()
+                self?.repository.addIndication(indication)
+                self?.meterStrumViewModel.deleteData()
+            }
+            alertController.addAction(deleteAction)
+        }
+    }
+    
+    func showDetailIndication(indication: StrumIndication?, currentMonth: Date) {
+        let detailIndication = assembly.makeDetailIndication(output: self, indication: indication, currentMonth: currentMonth)
+        navigationViewController?.pushViewController(detailIndication, animated: true)
+    }
 }
+
 
 extension Coordinator: IndicationOutput {
-    func didAddIndication() {
+    
+    func saveNewIndicationAndBack() {
         navigationViewController?.popViewController(animated: true)
+        meterStrumViewModel.updateIndication()
     }
 }
-
-extension Coordinator: IndicationInput {
-    func saveNewIndication(_ indication: StrumIndication) {
-        print("\(indication.dayMeter) - in coordinator")
-    }
-    
-    
-}
-
-

@@ -20,12 +20,13 @@ protocol IndicationViewControllerInterface: AnyObject {
     
 }
 
+
 //MARK: - IndicationViewController
 
 class IndicationViewController: BaseController {
     
     private let viewModel: IndicationViewModelInterface
-    var model: StrumIndication?
+    var mainIndication: StrumIndication!
     
     private var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -103,14 +104,25 @@ class IndicationViewController: BaseController {
         super.viewDidLoad()
         
         viewModel.viewDidLoad()
+        setTextFieldsText()
     }
     
     override func navBarRightButtonHandler() {
-        print("New right")
         // If all fields are not empty call model func -> saveData
-        if let dayText = Int(dayMeterTextField.text ?? "") {
-            viewModel.saveIndication(StrumIndication(dayMeter: dayText, nightMeter: 0, transferDate: "lol"))
+        
+        if let dayText = Int(dayMeterTextField.text ?? ""), let nightText = Int(nightMeterTextField.text ?? "") {
+            let saveModel = StrumIndication(dayMeter: dayText, nightMeter: nightText, transferDate: datePicker.date)
+            viewModel.saveIndication(saveModel)
         }
+    }
+    
+    func setTextFieldsText() {
+        datePicker.date = viewModel.currentMonth
+        guard let mainData = viewModel.mainData else { return }
+        self.mainIndication = mainData
+        dayMeterTextField.text = "\(mainData.dayMeter)"
+        nightMeterTextField.text = "\(mainData.nightMeter)"
+        datePicker.date = mainData.transferDate
     }
     
 }
@@ -128,6 +140,8 @@ extension IndicationViewController {
         view.addToView(dateStackView)
         dateStackView.addArrangedSubview(dateLabel)
         dateStackView.addArrangedSubview(datePicker)
+        
+        datePicker.addTarget(self, action: #selector(handleDatePicker(_:)), for: .valueChanged)
     }
     
     override func constraintsViews() {
@@ -149,5 +163,16 @@ extension IndicationViewController {
         super.configureAppearance()
         title = Constants.title
         addNavBarButton(at: .right, with: "Сохранить")
+    }
+    
+    @objc func handleDatePicker(_ sender: UIDatePicker) {
+        let selectedDate = sender.date
+
+        let calendar = Calendar.current
+        let componentsMonth = calendar.dateComponents([.month], from: selectedDate)
+        let currentComponentsMonth = calendar.dateComponents([.month], from: viewModel.currentMonth)
+        if componentsMonth != currentComponentsMonth {
+            datePicker.date = viewModel.currentMonth
+        }
     }
 }

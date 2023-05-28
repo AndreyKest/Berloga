@@ -11,7 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     
-    private let assembly = Assembly()
+    private let assembly = Assembly(indicationRepository: IndicationRepositoryImpl.shared)
     private lazy var coordinator = Coordinator(assembly: assembly)
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

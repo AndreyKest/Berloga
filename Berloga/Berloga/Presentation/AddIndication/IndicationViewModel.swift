@@ -12,6 +12,8 @@ import Foundation
 protocol IndicationViewModelInterface {
     func viewDidLoad()
     func saveIndication(_ indication: StrumIndication)
+    var mainData: StrumIndication? { get set }
+    var currentMonth: Date { get }
 }
 
 //MARK: - IndicationViewModel
@@ -19,11 +21,17 @@ protocol IndicationViewModelInterface {
 class IndicationViewModel {
     
     private weak var output: IndicationOutput?
-    private let input: IndicationInput
+    private let indicationRepository: IndicationRepository
+    private var indication: StrumIndication?
+    var mainData: StrumIndication?
+    var currentMonth: Date
     
-    init(output: IndicationOutput, input: IndicationInput) {
+    
+    init(output: IndicationOutput, indicationRepository: IndicationRepository, indication: StrumIndication? = nil, currentMonth: Date) {
         self.output = output
-        self.input = input
+        self.indicationRepository = indicationRepository
+        self.indication = indication
+        self.currentMonth = currentMonth
     }
 }
 
@@ -31,12 +39,12 @@ class IndicationViewModel {
 
 extension IndicationViewModel: IndicationViewModelInterface {
     func viewDidLoad() {
-        
+        mainData = indication
     }
     
     func saveIndication(_ indication: StrumIndication) {
-        input.saveNewIndication(indication)
-        output?.didAddIndication()
+        indicationRepository.addIndication(indication)
+        output?.saveNewIndicationAndBack()
     }
 }
 

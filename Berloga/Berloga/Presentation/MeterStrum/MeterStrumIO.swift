@@ -11,6 +11,8 @@ import Foundation
 
 protocol MeterStrumOutput: AnyObject {
     func showNewIndication()
+    func showDeleteAllert(indication: StrumIndication)
+    func showDetailIndication(indication: StrumIndication?, currentMonth: Date)
 }
 
 //MARK: - MeterStrumInput

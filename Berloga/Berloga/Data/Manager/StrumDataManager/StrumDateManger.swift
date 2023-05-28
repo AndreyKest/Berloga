@@ -15,9 +15,12 @@ protocol StrumDateManger {
     
     //MARK: - DateSerivce Methods
     func currentYear() -> String
-    func monthFromDate(_ date: String) -> String
-    func yearFromDate(_ date: String) -> String
+    func monthFromDate(_ date: Date) -> String
+    func yearFromDate(_ date: Date) -> String
     func countCurrentMonth() -> Int
+    func getStringFromData(date: Date) -> String
+    func getDateFromString(_ string: String) -> Date
+    func getDateFromComponents(year: Int, month: Int) -> Date
 }
 
 //MARK: - StrumDateMangerImpl
@@ -43,16 +46,28 @@ extension StrumDateMangerImpl: StrumDateManger {
         dateService.currentYear()
     }
     
-    func monthFromDate(_ date: String) -> String {
+    func monthFromDate(_ date: Date) -> String {
         dateService.monthFromDate(date)
     }
     
-    func yearFromDate(_ date: String) -> String {
+    func yearFromDate(_ date: Date) -> String {
         dateService.yearFromDate(date)
     }
     
     func countCurrentMonth() -> Int {
         dateService.countCurrentMonth()
+    }
+    
+    func getStringFromData(date: Date) -> String {
+        dateService.getStringFromData(date: date)
+    }
+    
+    func getDateFromString(_ string: String) -> Date {
+        dateService.getDateFromString(string)
+    }
+    
+    func getDateFromComponents(year: Int, month: Int) -> Date {
+        dateService.getDateFromComponents(year: year, month: month)
     }
     
 }

@@ -18,7 +18,9 @@ class YearsAnalysisServiceImpl: YearsAnalysisService {
     func obtainYears<T: StringData>(in data: [T]) -> [String] {
             var uniqueYears: Set<String> = []
             for value in data {
-                uniqueYears.insert(value.transferDate.components(separatedBy: "/").last!)
+                let calendar = Calendar.current
+                let year = calendar.component(.year, from: value.transferDate)
+                uniqueYears.insert("\(year)")
             }
             let sortedYears = uniqueYears.sorted(by: >)
             return sortedYears
