@@ -28,7 +28,7 @@ class IndicationViewController: BaseController {
     private let viewModel: IndicationViewModelInterface
     var mainIndication: StrumIndication!
     
-    private var stackView: UIStackView = {
+    private var meterStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -89,6 +89,46 @@ class IndicationViewController: BaseController {
         return datePicker
     }()
     
+    private let rateLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Тариф"
+        label.textColor = .white
+        return label
+    }()
+    
+    private let rateDayTextField = {
+        let textField = UITextField()
+        textField.backgroundColor = R.Colors.cellColor
+        return textField
+    }()
+    
+    private let rateNightTextField = {
+        let textField = UITextField()
+        textField.backgroundColor = R.Colors.cellColor
+        return textField
+    }()
+    
+    private let rateDayLabel = {
+        let label = UILabel()
+        label.text = "Дневной тариф:"
+        label.textColor = .white
+        return label
+    }()
+    
+    private let rateNightLabel = {
+        let label = UILabel()
+        label.text = "Ночной тариф:"
+        label.textColor = .white
+        return label
+    }()
+    
+    private let rateStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        return stackView
+    }()
+    
     init(viewModel: IndicationViewModelInterface) {
         self.viewModel = viewModel
         
@@ -110,8 +150,15 @@ class IndicationViewController: BaseController {
     override func navBarRightButtonHandler() {
         // If all fields are not empty call model func -> saveData
         
-        if let dayText = Int(dayMeterTextField.text ?? ""), let nightText = Int(nightMeterTextField.text ?? "") {
-            let saveModel = StrumIndication(dayMeter: dayText, nightMeter: nightText, transferDate: datePicker.date)
+        if let dayText = Int(dayMeterTextField.text ?? ""),
+           let nightText = Int(nightMeterTextField.text ?? "") {
+            let rate = RateMeter(dayRate: Float(rateDayTextField.text ?? "") ?? viewModel.rate.dayRate,
+                                 nightRate: Float(rateNightTextField.text ?? "") ?? viewModel.rate.nightRate,
+                                 adoptionDate: datePicker.date)
+            let saveModel = StrumIndication(dayMeter: dayText,
+                                            nightMeter: nightText,
+                                            transferDate: datePicker.date,
+                                            rateMeter: rate)
             viewModel.saveIndication(saveModel)
         }
     }
@@ -131,32 +178,9 @@ class IndicationViewController: BaseController {
 
 extension IndicationViewController {
     override func setupViews() {
-        view.addToView(stackView)
-        stackView.addArrangedSubview(dayMeterLabel)
-        stackView.addArrangedSubview(dayMeterTextField)
-        stackView.addArrangedSubview(nightMeterLabel)
-        stackView.addArrangedSubview(nightMeterTextField)
-        
-        view.addToView(dateStackView)
-        dateStackView.addArrangedSubview(dateLabel)
-        dateStackView.addArrangedSubview(datePicker)
-        
-        datePicker.addTarget(self, action: #selector(handleDatePicker(_:)), for: .valueChanged)
-    }
-    
-    override func constraintsViews() {
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            stackView.heightAnchor.constraint(equalToConstant: 150),
-            
-            dateStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 10),
-            dateStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            dateStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            dateStackView.heightAnchor.constraint(equalToConstant: 100),
-        ])
+        setupMeterStackView()
+        setupDateStackView()
+        setupRateStackView()
     }
     
     override func configureAppearance() {
@@ -174,5 +198,55 @@ extension IndicationViewController {
         if componentsMonth != currentComponentsMonth {
             datePicker.date = viewModel.currentMonth
         }
+    }
+    
+    func setupMeterStackView() {
+        //Add on view
+        view.addToView(meterStackView)
+        meterStackView.addArrangedSubview(dayMeterLabel)
+        meterStackView.addArrangedSubview(dayMeterTextField)
+        meterStackView.addArrangedSubview(nightMeterLabel)
+        meterStackView.addArrangedSubview(nightMeterTextField)
+        //Setup constraints
+        NSLayoutConstraint.activate([
+            meterStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            meterStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            meterStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            meterStackView.heightAnchor.constraint(equalToConstant: 150),
+        ])
+    }
+    
+    func setupDateStackView() {
+        //Add on view
+        view.addToView(dateStackView)
+        dateStackView.addArrangedSubview(dateLabel)
+        dateStackView.addArrangedSubview(datePicker)
+        //Setup constraints
+        NSLayoutConstraint.activate([
+            dateStackView.topAnchor.constraint(equalTo: meterStackView.bottomAnchor, constant: 10),
+            dateStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            dateStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            dateStackView.heightAnchor.constraint(equalToConstant: 100),
+        ])
+        datePicker.addTarget(self, action: #selector(handleDatePicker(_:)), for: .valueChanged)
+    }
+    
+    func setupRateStackView() {
+        //Add on view
+        view.addToView(rateStackView)
+        rateStackView.addArrangedSubview(rateLabel)
+        rateStackView.addArrangedSubview(rateDayLabel)
+        rateStackView.addArrangedSubview(rateDayTextField)
+        rateStackView.addArrangedSubview(rateNightLabel)
+        rateStackView.addArrangedSubview(rateNightTextField)
+        //Setup constraints
+        NSLayoutConstraint.activate([
+            rateStackView.topAnchor.constraint(equalTo: dateStackView.bottomAnchor, constant: 30),
+            rateStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            rateStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            rateStackView.heightAnchor.constraint(equalToConstant: 200),
+        ])
+        rateDayTextField.text = "\(viewModel.rate.dayRate)"
+        rateNightTextField.text = "\(viewModel.rate.nightRate)"
     }
 }

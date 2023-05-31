@@ -34,14 +34,14 @@ class Assembly {
         return view
     }
     
-    func makeIndication(output: IndicationOutput) -> BaseController {
-        let viewModel = IndicationViewModel(output: output, indicationRepository: indicationRepository, currentMonth: Date())
+    func makeIndication(output: IndicationOutput, rate: RateMeter) -> BaseController {
+        let viewModel = IndicationViewModel(output: output, indicationRepository: indicationRepository, currentMonth: Date(), rate: rate)
         let view = IndicationViewController(viewModel: viewModel)
         return view
     }
     
-    func makeDetailIndication(output: IndicationOutput, indication: StrumIndication?, currentMonth: Date) -> BaseController {
-        let viewModel = IndicationViewModel(output: output, indicationRepository: indicationRepository, indication: indication, currentMonth: currentMonth)
+    func makeDetailIndication(output: IndicationOutput, indication: StrumIndication?, currentMonth: Date, rate: RateMeter) -> BaseController {
+        let viewModel = IndicationViewModel(output: output, indicationRepository: indicationRepository, indication: indication, currentMonth: currentMonth, rate: rate)
         let view = IndicationViewController(viewModel: viewModel)
         return view
     }

@@ -17,6 +17,8 @@ protocol StrumUseCase {
     func addNewIndication(_ indications: [StrumIndication])
     
     var userDefaultsFacade: UserDefaultsFacade { get }
+    
+    func getRatesMeter() -> [RateMeter]
 }
 
 //MARK: - StrumUseCaseImpl
@@ -24,6 +26,7 @@ protocol StrumUseCase {
 class StrumUseCaseImpl {
     
     var strumIndication: [StrumIndication] = []
+    var ratesMeter: [RateMeter] = []
     
     var userDefaultsFacade: UserDefaultsFacade
     
@@ -48,6 +51,11 @@ extension StrumUseCaseImpl: StrumUseCase {
     
     func addNewIndication(_ indications: [StrumIndication]) {
         userDefaultsFacade.saveData(indications, forKey: R.UserDefaultsKeys.strumIndicationKey)
+    }
+    
+    func getRatesMeter() -> [RateMeter] {
+        ratesMeter = userDefaultsFacade.fetchData([RateMeter].self, forKey: R.UserDefaultsKeys.rateIndicationKey) ?? []
+        return ratesMeter
     }
     
 }

@@ -15,6 +15,7 @@ struct StrumIndication: Codable, Equatable, StringData {
     var dayMeter: Int
     var nightMeter: Int
     var transferDate: Date
+    var rateMeter: RateMeter? = nil
     
     static func == (lhs: StrumIndication, rhs: StrumIndication) -> Bool {
         return lhs.transferDate == rhs.transferDate

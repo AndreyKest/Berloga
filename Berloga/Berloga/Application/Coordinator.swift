@@ -59,8 +59,8 @@ extension Coordinator: MainMenuOutput {
 
 extension Coordinator: MeterStrumOutput {
     
-    func showNewIndication() {
-        let newIndication = assembly.makeIndication(output: self)
+    func showNewIndication(rate: RateMeter) {
+        let newIndication = assembly.makeIndication(output: self, rate: rate)
         navigationViewController?.pushViewController(newIndication, animated: true)
     }
     
@@ -79,8 +79,8 @@ extension Coordinator: MeterStrumOutput {
         }
     }
     
-    func showDetailIndication(indication: StrumIndication?, currentMonth: Date) {
-        let detailIndication = assembly.makeDetailIndication(output: self, indication: indication, currentMonth: currentMonth)
+    func showDetailIndication(indication: StrumIndication?, currentMonth: Date, rate: RateMeter) {
+        let detailIndication = assembly.makeDetailIndication(output: self, indication: indication, currentMonth: currentMonth, rate: rate)
         navigationViewController?.pushViewController(detailIndication, animated: true)
     }
 }

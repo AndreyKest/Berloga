@@ -110,6 +110,7 @@ extension MeterStrumViewModel: MeterStrumViewModelInterface {
                                                          diferencePrice: nil,
                                                          transferDate: indicationForMonth.transferDate
                     )
+                    
                     rows.append(myRow)
                 } else {
                     rows.append(MeterStrumTableViewModel(month: month,
@@ -134,18 +135,20 @@ extension MeterStrumViewModel: MeterStrumViewModelInterface {
             currentMonth = dateManager.getDateFromComponents(year: year, month: monthIndex)
             
         }
+        guard let defaultRate = useCase.getRatesMeter().last else { return }
         if let dayMeter = currentTableData.dayMeter, let nightMeter = currentTableData.nightMeter, let transferDate = currentTableData.transferDate {
             let choosenIndication = StrumIndication(dayMeter: dayMeter, nightMeter: nightMeter, transferDate: transferDate)
             indicationStatus = .change
-            output?.showDetailIndication(indication: choosenIndication, currentMonth: currentMonth)
+            output?.showDetailIndication(indication: choosenIndication, currentMonth: currentMonth, rate: defaultRate)
         } else {
             indicationStatus = .add
-            output?.showDetailIndication(indication: nil, currentMonth: currentMonth)
+            output?.showDetailIndication(indication: nil, currentMonth: currentMonth, rate: defaultRate)
         }
     }
     
     func addNewIndication() {
-        output?.showNewIndication()
+        guard let defaultRate = useCase.getRatesMeter().last else { return }
+        output?.showNewIndication(rate: defaultRate)
         indicationStatus = .add
     }
     

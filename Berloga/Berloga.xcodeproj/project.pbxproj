@@ -49,6 +49,7 @@
 		A28AECC62A155E19004A93A4 /* IndicationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECC52A155E19004A93A4 /* IndicationRepository.swift */; };
 		A28AECC92A16C2F1004A93A4 /* PrepareIndicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECC82A16C2F1004A93A4 /* PrepareIndicationService.swift */; };
 		A28AECCC2A1AA9F3004A93A4 /* DefaultAllertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECCB2A1AA9F3004A93A4 /* DefaultAllertFactory.swift */; };
+		A28AECCE2A26900C004A93A4 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28AECCD2A26900C004A93A4 /* Rate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		A28AECC52A155E19004A93A4 /* IndicationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicationRepository.swift; sourceTree = "<group>"; };
 		A28AECC82A16C2F1004A93A4 /* PrepareIndicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareIndicationService.swift; sourceTree = "<group>"; };
 		A28AECCB2A1AA9F3004A93A4 /* DefaultAllertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAllertFactory.swift; sourceTree = "<group>"; };
+		A28AECCD2A26900C004A93A4 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,17 +219,17 @@
 		A225004029F8698C00AD4D1D /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				A225004129F8699700AD4D1D /* StrumDataManager */,
+				A225004129F8699700AD4D1D /* StrumDateManager */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		A225004129F8699700AD4D1D /* StrumDataManager */ = {
+		A225004129F8699700AD4D1D /* StrumDateManager */ = {
 			isa = PBXGroup;
 			children = (
 				A28AECB92A0ADE22004A93A4 /* StrumDateManger.swift */,
 			);
-			path = StrumDataManager;
+			path = StrumDateManager;
 			sourceTree = "<group>";
 		};
 		A225005729FB0A4400AD4D1D /* Factory */ = {
@@ -382,6 +384,7 @@
 			children = (
 				A225002529F70BC100AD4D1D /* StrumIndication.swift */,
 				A28AECB52A06E764004A93A4 /* Category.swift */,
+				A28AECCD2A26900C004A93A4 /* Rate.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				A28AECB42A06E6DE004A93A4 /* CategoryUseCase.swift in Sources */,
 				A225001229F5C40F00AD4D1D /* BaseViewController.swift in Sources */,
 				A225004529F86BFC00AD4D1D /* DateService.swift in Sources */,
+				A28AECCE2A26900C004A93A4 /* Rate.swift in Sources */,
 				A225003C29F8619600AD4D1D /* YearsAnalysisService.swift in Sources */,
 				A28AECC12A0D8954004A93A4 /* IndicationViewController.swift in Sources */,
 				A28AEC912A058F2F004A93A4 /* MeterStrumViewModel.swift in Sources */,

@@ -49,7 +49,6 @@ class MainMenuViewController: BaseController {
         super.viewDidLoad()
         viewModel.viewDidLoad()
         setupTableView()
-        
     }
     
     private func setupTableView() {

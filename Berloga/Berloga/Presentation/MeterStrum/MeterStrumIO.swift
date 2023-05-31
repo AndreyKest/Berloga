@@ -10,9 +10,9 @@ import Foundation
 //MARK: - MeterStrumOutput
 
 protocol MeterStrumOutput: AnyObject {
-    func showNewIndication()
+    func showNewIndication(rate: RateMeter)
     func showDeleteAllert(indication: StrumIndication)
-    func showDetailIndication(indication: StrumIndication?, currentMonth: Date)
+    func showDetailIndication(indication: StrumIndication?, currentMonth: Date, rate: RateMeter)
 }
 
 //MARK: - MeterStrumInput

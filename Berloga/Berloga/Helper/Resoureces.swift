@@ -78,6 +78,7 @@ enum R {
     
     enum UserDefaultsKeys {
         static let strumIndicationKey = "strumIndicationKey"
+        static let rateIndicationKey = "rateIndicationKey"
     }
     
     enum Fonts {

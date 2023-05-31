@@ -14,6 +14,7 @@ protocol IndicationViewModelInterface {
     func saveIndication(_ indication: StrumIndication)
     var mainData: StrumIndication? { get set }
     var currentMonth: Date { get }
+    var rate: RateMeter { get set }
 }
 
 //MARK: - IndicationViewModel
@@ -25,13 +26,15 @@ class IndicationViewModel {
     private var indication: StrumIndication?
     var mainData: StrumIndication?
     var currentMonth: Date
+    var rate: RateMeter
     
     
-    init(output: IndicationOutput, indicationRepository: IndicationRepository, indication: StrumIndication? = nil, currentMonth: Date) {
+    init(output: IndicationOutput, indicationRepository: IndicationRepository, indication: StrumIndication? = nil, currentMonth: Date, rate: RateMeter) {
         self.output = output
         self.indicationRepository = indicationRepository
         self.indication = indication
         self.currentMonth = currentMonth
+        self.rate = rate
     }
 }
 
