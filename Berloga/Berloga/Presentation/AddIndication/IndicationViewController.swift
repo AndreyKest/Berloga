@@ -122,6 +122,16 @@ class IndicationViewController: BaseController {
         return label
     }()
     
+    private let settingRateButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Настройки тарифа", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = R.Colors.cellColor
+        button.layer.cornerRadius = 10
+        button.makeSystem(button)
+        return button
+    }()
+    
     private let rateStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -181,6 +191,7 @@ extension IndicationViewController {
         setupMeterStackView()
         setupDateStackView()
         setupRateStackView()
+        setupSettingRateButton()
     }
     
     override func configureAppearance() {
@@ -248,5 +259,23 @@ extension IndicationViewController {
         ])
         rateDayTextField.text = "\(viewModel.rate.dayRate)"
         rateNightTextField.text = "\(viewModel.rate.nightRate)"
+    }
+    
+    func setupSettingRateButton() {
+        //Add on view
+        view.addToView(settingRateButton)
+        //Setup constraints
+        NSLayoutConstraint.activate([
+            settingRateButton.topAnchor.constraint(equalTo: rateStackView.bottomAnchor, constant: 30),
+            settingRateButton.centerXAnchor.constraint(equalTo: rateStackView.centerXAnchor),
+            settingRateButton.widthAnchor.constraint(equalToConstant: 200),
+            settingRateButton.heightAnchor.constraint(equalToConstant: 40),
+        ])
+        settingRateButton.addTarget(self, action: #selector(settingRateButtonAction), for: .touchUpInside)
+        
+    }
+    
+    @objc private func settingRateButtonAction() {
+        viewModel.defaultRateAlert(date: datePicker.date)
     }
 }

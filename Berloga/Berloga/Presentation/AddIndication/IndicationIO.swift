@@ -11,6 +11,7 @@ import Foundation
 
 protocol IndicationOutput: AnyObject {
     func saveNewIndicationAndBack()
+    func showDefaultRateAllert(date: Date)
 }
 
 //MARK: - IndicationInput

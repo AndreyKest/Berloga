@@ -92,4 +92,22 @@ extension Coordinator: IndicationOutput {
         navigationViewController?.popViewController(animated: true)
         meterStrumViewModel.updateIndication()
     }
+    
+    func showDefaultRateAllert(date: Date) {
+        let allert = defaultAllertFactory.getAllert(by: .defaultRateAlert)
+        navigationViewController?.present(allert, animated: true)
+        
+        if let alertController = allert as? UIAlertController {
+            let saveAction = UIAlertAction(title: "Save", style: .default, handler: { [weak self] action in
+                guard let fields = alertController.textFields, fields.count == 2 else { return }
+                guard let dayRate = fields[0].text, !dayRate.isEmpty, let nightRate = fields[1].text, !nightRate.isEmpty else { return }
+                print(dayRate, nightRate)
+                guard let floatDayRate = Float(dayRate), let floatNightRate = Float(nightRate) else { return }
+                let newRate = RateMeter(dayRate: floatDayRate, nightRate: floatNightRate, adoptionDate: date)
+                self?.meterAssembly.addRateMeter(rate: newRate)
+                
+            })
+            alertController.addAction(saveAction)
+        }
+    }
 }

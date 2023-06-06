@@ -12,9 +12,13 @@ import Foundation
 protocol IndicationViewModelInterface {
     func viewDidLoad()
     func saveIndication(_ indication: StrumIndication)
+    func defaultRateAlert(date: Date)
+    
     var mainData: StrumIndication? { get set }
     var currentMonth: Date { get }
     var rate: RateMeter { get set }
+    
+    var bindRate: Binding<RateMeter> { get set }
 }
 
 //MARK: - IndicationViewModel
@@ -27,6 +31,8 @@ class IndicationViewModel {
     var mainData: StrumIndication?
     var currentMonth: Date
     var rate: RateMeter
+    
+    var bindRate: Binding<RateMeter> = Binding(RateMeter(dayRate: 0, nightRate: 0, adoptionDate: Date()))
     
     
     init(output: IndicationOutput, indicationRepository: IndicationRepository, indication: StrumIndication? = nil, currentMonth: Date, rate: RateMeter) {
@@ -43,11 +49,16 @@ class IndicationViewModel {
 extension IndicationViewModel: IndicationViewModelInterface {
     func viewDidLoad() {
         mainData = indication
+        bindRate.value = rate
     }
     
     func saveIndication(_ indication: StrumIndication) {
         indicationRepository.addIndication(indication)
         output?.saveNewIndicationAndBack()
+    }
+    
+    func defaultRateAlert(date: Date) {
+        output?.showDefaultRateAllert(date: date)
     }
 }
 

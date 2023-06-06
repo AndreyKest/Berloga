@@ -24,6 +24,7 @@ struct MeterStrumTableViewModel {
     let nightMeter: Int?
     let diferencePrice: Float?
     let transferDate: Date?
+    let rate: RateMeter?
 }
 
 //MARK: - StudenTableViewCell

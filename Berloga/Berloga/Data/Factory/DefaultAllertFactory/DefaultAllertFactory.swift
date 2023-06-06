@@ -11,6 +11,7 @@ import UIKit
 enum DefaultAlertType {
     case okAlert
     case deleteAllert
+    case defaultRateAlert
 }
 
 protocol DefaultAllertFactory: AnyObject {
@@ -27,11 +28,35 @@ final class DefaultAllertFactoryImpl: DefaultAllertFactory {
             return deleteAlert()
         case .deleteAllert:
             return deleteAlert()
+        case .defaultRateAlert:
+        return defaultRateAlert()
         }
     }
     
     private func deleteAlert() -> UIViewController {
         let alert = UIAlertController(title: "Hello", message: "Allert was shown", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(cancelAction)
+        
+        return alert
+    }
+    
+    private func defaultRateAlert() -> UIViewController {
+        let alert = UIAlertController(title: "Изменить стандартный тариф показаний", message: "Введите новый тариф показаний", preferredStyle: .alert)
+        
+        alert.addTextField() { textFields in
+            textFields.placeholder = "Дневной тариф"
+            textFields.returnKeyType = .next
+            textFields.keyboardType = .decimalPad
+        }
+        
+        alert.addTextField() { textFields in
+            textFields.placeholder = "Ночной тариф"
+            textFields.returnKeyType = .continue
+            textFields.keyboardType = .decimalPad
+        }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         
         alert.addAction(cancelAction)

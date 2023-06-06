@@ -19,6 +19,8 @@ protocol StrumUseCase {
     var userDefaultsFacade: UserDefaultsFacade { get }
     
     func getRatesMeter() -> [RateMeter]
+    
+    func addRateMeter(rate: RateMeter)
 }
 
 //MARK: - StrumUseCaseImpl
@@ -56,6 +58,12 @@ extension StrumUseCaseImpl: StrumUseCase {
     func getRatesMeter() -> [RateMeter] {
         ratesMeter = userDefaultsFacade.fetchData([RateMeter].self, forKey: R.UserDefaultsKeys.rateIndicationKey) ?? []
         return ratesMeter
+    }
+    
+    func addRateMeter(rate: RateMeter) {
+        var rates = getRatesMeter()
+        rates.append(rate)
+        userDefaultsFacade.saveData(rates, forKey: R.UserDefaultsKeys.rateIndicationKey)
     }
     
 }

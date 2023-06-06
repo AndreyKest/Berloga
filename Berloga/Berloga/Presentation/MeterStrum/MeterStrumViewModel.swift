@@ -108,7 +108,8 @@ extension MeterStrumViewModel: MeterStrumViewModelInterface {
                                                          dayMeter: indicationForMonth.dayMeter,
                                                          nightMeter: indicationForMonth.nightMeter,
                                                          diferencePrice: nil,
-                                                         transferDate: indicationForMonth.transferDate
+                                                         transferDate: indicationForMonth.transferDate,
+                                                         rate: indicationForMonth.rateMeter
                     )
                     
                     rows.append(myRow)
@@ -117,7 +118,8 @@ extension MeterStrumViewModel: MeterStrumViewModelInterface {
                                                          dayMeter: nil,
                                                          nightMeter: nil,
                                                          diferencePrice: nil,
-                                                         transferDate: nil
+                                                         transferDate: nil,
+                                                         rate: nil
                     ))
                 }
             }
@@ -139,7 +141,8 @@ extension MeterStrumViewModel: MeterStrumViewModelInterface {
         if let dayMeter = currentTableData.dayMeter, let nightMeter = currentTableData.nightMeter, let transferDate = currentTableData.transferDate {
             let choosenIndication = StrumIndication(dayMeter: dayMeter, nightMeter: nightMeter, transferDate: transferDate)
             indicationStatus = .change
-            output?.showDetailIndication(indication: choosenIndication, currentMonth: currentMonth, rate: defaultRate)
+            guard let currentRate = currentTableData.rate == nil ? defaultRate : currentTableData.rate else { return }
+            output?.showDetailIndication(indication: choosenIndication, currentMonth: currentMonth, rate: currentRate)
         } else {
             indicationStatus = .add
             output?.showDetailIndication(indication: nil, currentMonth: currentMonth, rate: defaultRate)
